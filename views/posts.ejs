@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+    <div class="main-container">
+        <div class="main-content">
+            <div class="post">
+                <h1><%=post.title%></h1>
+                <p class="post-content"><%=post.content%></p>
+
+                <% if(loggedIn){ %>
+                <button onclick="location.href='/posts/edit/<%=post._id%>'" type="button" class="btn btn-small form-margin">Edit</button>
+
+                <button onclick="location.href='/posts/delete/<%=post._id%>'" type="button" class="btn btn-small form-margin">Delete</button>
+                <%}%>
+            </div>
+        </div>
+    </div>
+
+
+<%- include("partials/footer") -%>

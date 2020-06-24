@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James' Blog</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-brand-text" href="/">PERSONAL JOURNAL</a>
+        </div>
+
+        <div class="navigation">
+          <div class="nav-item">
+            <a class="nav-link" href="/">HOME</a>
+          </div>
+          <div class="nav-item">
+            <a class="nav-link" href="/about">ABOUT</a>
+          </div>
+
+          <div class="nav-item">
+            <a class="nav-link" href="/contact">CONTACT</a>
+          </div>
+
+          <% if(loggedIn){ %>
+            <div class="nav-item">
+              <a class="nav-link" href="/compose">COMPOSE</a>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link" href="/logout">LOGOUT</a>
+            </div>
+          <%}else{%>
+            <div class="nav-item">
+              <a class="nav-link" href="/login">LOGIN</a>
+            </div>
+          <%}%>
+
+        </div>
+      </div>
+    </nav>
