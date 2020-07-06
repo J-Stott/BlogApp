@@ -61,6 +61,26 @@ passport.deserializeUser(function(id, done){
     });
 });
 
+//Test register route.
+//Add a single test user to use the blog
+//app.get("/register", function(req, res){
+//
+//    const username = "Your Username Here";
+//    const password = "Your Password Here";
+//
+//    User.register({username: username}, password, function(err, user){
+//        if(err){
+//            console.log(err);
+//        } else {
+//            passport.authenticate("local")(req, res, function(){
+//                res.redirect("/");
+//            });
+//        }
+//    });
+//});
+
+
+
 //root route
 app.get("/", function(req, res){
 
