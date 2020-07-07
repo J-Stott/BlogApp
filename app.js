@@ -157,7 +157,7 @@ app.post("/compose", function(req, res){
 });
 
 //routes to edit. Displays previous content if id exists
-app.get("/posts/edit/:postId", function(req, res){
+app.get("/posts/:postId/edit", function(req, res){
 
     if(req.isAuthenticated()){
         const postId = req.params.postId;
@@ -180,7 +180,7 @@ app.get("/posts/edit/:postId", function(req, res){
 });
 
 //updates a document based on edits made by user
-app.post("/posts/edit/:postId", function(req, res){
+app.post("/posts/:postId/edit", function(req, res){
     const postId = req.params.postId;
     const postTitle = req.body.postTitle;
     const postContent = req.body.postContent;
@@ -199,7 +199,7 @@ app.post("/posts/edit/:postId", function(req, res){
 });
 
 //deletes a post from the db
-app.get("/posts/delete/:postId", function(req, res){
+app.get("/posts/:postId/delete", function(req, res){
     if(req.isAuthenticated()){
         const postId = req.params.postId;
 

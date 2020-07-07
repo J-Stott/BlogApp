@@ -1,133 +1,164 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
 }
 
-.container{
-    margin: 0 auto;
-    display: flex;
-    flex-basis: 80%;
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-basis: 80%;
 }
 
-.navbar{
-    display: flex;
-    padding: 30px 30px;
-    background-color: #e7e7e7;
+.navbar {
+  display: flex;
+  padding: 30px 30px;
+  background-color: #e7e7e7;
+  overflow: hidden;
 }
 
-.navbar-brand{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
+.navbar-brand {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
 }
 
-.navbar-brand-text{
-    letter-spacing: 3px;
-    color: #474747;
-    font-size: 1.5rem;
-    text-decoration: none;
+.navbar-brand-text {
+  letter-spacing: 3px;
+  color: #474747;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
-.navigation{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
 }
 
-.nav-item{
+.nav-item {
+  display: inline-block;
+}
+
+.nav-burger {
+    display: none;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-item {
+    display: none;
+  }
+  .nav-burger {
     display: inline-block;
-    padding: 0 10px;
+  }
 }
 
-.nav-link{
-    letter-spacing: 3px;
-    font-family: Helvetica, sans-serif;
-    color: #474747;
-    text-decoration: none;
-    padding: 0 10px;
-}
+@media screen and (max-width: 1000px) {
 
-.nav-link:hover{
-    color: #777777;
-}
+    .navigation.responsive{
+        display: block;
+    }
 
-.main-content{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.main-container{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 30px;
-}
-
-.login-container{
-    display: flex;
-    flex-direction: column;
-}
-
-.post{
-    margin-top: 20px;
-    white-space: normal;
-}
-
-.post-content{
-    white-space: pre-wrap;
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-}
-
-.login-form{
-    width: 100%;
-    max-width: 400px;
-    padding: 100px 0px 0px 0px;
-    margin: auto;
-}
-
-.form-control{
-   display: block;
-   width: 100%;
-   font-size: 20px;
-   margin-top: 10px;
-   border-radius: 4px;
-   padding: 5px;
-   box-sizing: border-box;
-}
-
-.btn{
-    background-color: #193c9c;
-    color: white;
-    height: 40px;
-    border-radius: 4px;
-    border: none;
-}
-
-.btn-small{
-    width: 100px;
-}
-
-.btn-block{
-    width: 100%;
+  .navigation.responsive .nav-item {
     display: block;
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
-.input-rounding{
-    padding: 5px;
-    border-radius: 4px;
+.nav-link {
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+  color: #474747;
+  text-decoration: none;
 }
 
-.form-margin{
-    margin-top: 20px;
+.nav-item:not(:first-child) {
+  margin-left: 0.8rem;
 }
 
-.btn:hover{
-    background-color: #355ecf;
+.nav-link:hover {
+  color: #777777;
+}
+
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  margin-top: 20px;
+  white-space: normal;
+}
+
+.post-content {
+  white-space: pre-wrap;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 100px 0px 0px 0px;
+  margin: auto;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #193c9c;
+  color: white;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-small {
+  width: 100px;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.input-rounding {
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.form-margin {
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #355ecf;
 }

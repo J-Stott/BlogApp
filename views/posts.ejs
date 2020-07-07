@@ -7,9 +7,9 @@
                 <p class="post-content"><%=post.content%></p>
 
                 <% if(loggedIn){ %>
-                <button onclick="location.href='/posts/edit/<%=post._id%>'" type="button" class="btn btn-small form-margin">Edit</button>
+                <button onclick="location.href='/posts/<%=post._id%>/edit'" type="button" class="btn btn-small form-margin">Edit</button>
 
-                <button onclick="location.href='/posts/delete/<%=post._id%>'" type="button" class="btn btn-small form-margin">Delete</button>
+                <button onclick="location.href='/posts/<%=post._id%>/delete'" type="button" class="btn btn-small form-margin">Delete</button>
                 <%}%>
             </div>
         </div>

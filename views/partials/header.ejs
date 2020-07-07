@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James' Blog</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://kit.fontawesome.com/1a3030e4f3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-brand-text" href="/">PERSONAL JOURNAL</a>
-        </div>
-
         <div class="navigation">
+          <div class="navbar-brand">
+            <a class="navbar-brand-text" href="/">PERSONAL JOURNAL</a>
+          </div>
+          
           <div class="nav-item">
             <a class="nav-link" href="/">HOME</a>
           </div>
@@ -39,6 +40,10 @@
             </div>
           <%}%>
 
+        </div>
+
+        <div class="nav-burger">
+          <a href="javascript:void(0);" class="nav-link" onclick="myFunction()"><i class="fas fa-bars"></i></a>
         </div>
       </div>
     </nav>

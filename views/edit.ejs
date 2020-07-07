@@ -4,7 +4,7 @@
     <div class="main-content">
         <h1>Compose</h1>
 
-        <form class="form" action="/posts/edit/<%=post.id%>" method="post">
+        <form class="form" action="/posts/<%=post.id%>/edit" method="post">
             <label for="postTitle">Title</label>
             <input class="form-margin input-rounding" type="text" name="postTitle" id="" value="<%=post.title%>">
             <label class="form-margin" for="postContent">Post</label>
